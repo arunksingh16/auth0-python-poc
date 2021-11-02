@@ -38,6 +38,10 @@ pipenv install -e .
 pipenv lock
 # execute in prd
 pipenv install --ignore-pipfile
+# generate requirements.txt
+pipenv run pip freeze > requirements.txt
+# records the new requirements to the Pipfile.lock file and installs the missing dependencies on the Python interpreter.
+pipenv update
 ```
 
 #### cleanup
