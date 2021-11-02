@@ -31,13 +31,24 @@ pipenv
 # activate
 pipenv shell
 # install
-pipenv install
+pipenv install 
+# Install a local setup.py into your virtual environment/Pipfile:
+pipenv install -e .
 # generate lock file
 pipenv lock
 # execute in prd
 pipenv install --ignore-pipfile
 ```
 
+#### cleanup
+Remove project virtualenv (inferred from current directory):
+```
+$ pipenv --rm
+```
+Purge all package(s) from virtualenv
+```
+pipenv uninstall --all
+```
 
 #### Running Using Docker
 
